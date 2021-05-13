@@ -4,7 +4,7 @@ interface IBlog {
   id?: number;
   title: string;
   content: string;
-  authorid: number;
+  authorid?: number;
 }
 
 const all = async () => {
@@ -23,7 +23,7 @@ const createBlogPost = async (blog: IBlog) => {
 
 const updateBlogPost = async (blog: IBlog) => {
   return Query(
-    `UPDATE blogs SET title=${blog.title} content=${blog.content} WHERE id=${blog.id}`
+    `UPDATE blogs SET title=${blog.title}, content=${blog.content} WHERE id=${blog.id}`
   );
 };
 

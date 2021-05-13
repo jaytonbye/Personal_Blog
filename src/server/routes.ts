@@ -29,17 +29,20 @@ router.post("/api/blogs/", async (req, res) => {
   }
 });
 
-router.put("api/blogs/", async (req, res) => {
+router.put("/api/blogs/", async (req, res) => {
   try {
+    console.log("attempting");
     res.json(await db.Blogs.updateBlogPost(req.body));
   } catch (error) {
     console.log(error);
+    console.log("somethings fucking up here");
     res.sendStatus(500);
   }
 });
 
-router.delete("api/blogs/:id", async (req, res) => {
+router.delete("/api/blogs/:id", async (req, res) => {
   let id = Number(req.params.id);
+  console.log("hello");
   try {
     res.json(await db.Blogs.deleteBlogPost(id));
   } catch (error) {
