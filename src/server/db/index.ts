@@ -1,5 +1,8 @@
 import * as mysql from "mysql";
 import Blogs from "./blogs";
+import Authors from "./Authors";
+import Tags from "./Tags";
+import BlogTags from "./BlogTags";
 
 export const Connection = mysql.createConnection({
   host: "localhost",
@@ -20,4 +23,7 @@ export const Query = (query: string, values?: Array<string | number>) => {
 
 export default {
   Blogs,
+  Authors,
+  Tags,
+  BlogTags,
 };
