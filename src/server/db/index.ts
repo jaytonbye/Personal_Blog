@@ -4,7 +4,7 @@ import Authors from "./Authors";
 import Tags from "./Tags";
 import BlogTags from "./BlogTags";
 
-export const Connection = mysql.createConnection({
+const Connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "jason",

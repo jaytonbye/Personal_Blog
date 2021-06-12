@@ -1,9 +1,5 @@
 import { Query } from "./index";
-
-interface ITag {
-  id?: number;
-  name: string;
-}
+import { ITag } from "../../types";
 
 const all = async () => {
   return Query("SELECT * FROM tags");

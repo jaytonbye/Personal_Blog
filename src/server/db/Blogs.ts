@@ -1,18 +1,19 @@
 import { Query } from "./index";
-
-interface IBlog {
-  id?: number;
-  title: string;
-  content: string;
-  authorid?: number;
-}
+import { IBlog } from "../../types";
 
 const all = async () => {
-  return Query("SELECT * FROM blogs");
+  //  return Query("SELECT * FROM blogs");
+  return Query(
+    "select blogs.*, authors.name from blogs join authors on authors.id = blogs.authorid;"
+  );
 };
 
+//Todo: make the rest safe from sql injections like this one:
 const individualBlogPost = async (id: number) => {
-  return Query(`SELECT * FROM blogs WHERE id=${id}`);
+  return Query(
+    "select blogs.title, authors.name from blogs join authors on authors.id = blogs.authorid WHERE blogs.id=?;",
+    [id]
+  );
 };
 
 const createBlogPost = async (blog: IBlog) => {

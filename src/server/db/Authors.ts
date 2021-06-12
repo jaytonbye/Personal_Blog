@@ -1,10 +1,5 @@
 import { Query } from "./index";
-
-interface IAuthor {
-  id?: number;
-  name: string;
-  email: string;
-}
+import { IAuthor } from "../../types";
 
 const all = async () => {
   return Query("SELECT * FROM authors");

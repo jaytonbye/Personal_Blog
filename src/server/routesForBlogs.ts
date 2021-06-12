@@ -1,5 +1,6 @@
 import { Router } from "express";
 import db from "./db";
+
 const router = Router();
 
 router.get("/:id?", async (req, res) => {

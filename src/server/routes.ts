@@ -1,10 +1,10 @@
-import * as express from "express";
+import { Router } from "express";
 import routesForBlogs from "./routesForBlogs";
 import routesForAuthors from "./routesForAuthors";
 import routesForTags from "./routesForTags";
 import routesForBlogTags from "./routesForBlogTags";
 
-const router = express.Router();
+const router = Router();
 
 router.get("/hello", (req, res, next) => {
   res.json("World");
