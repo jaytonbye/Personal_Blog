@@ -3,6 +3,7 @@ import Blogs from "./blogs";
 import Authors from "./Authors";
 import Tags from "./Tags";
 import BlogTags from "./BlogTags";
+import Joins from "./Joins";
 
 const Connection = mysql.createConnection({
   host: "localhost",
@@ -26,4 +27,5 @@ export default {
   Authors,
   Tags,
   BlogTags,
+  Joins,
 };

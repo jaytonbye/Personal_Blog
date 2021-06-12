@@ -24,7 +24,7 @@ const IndividualBlog = (props: any) => {
         <div className="card">
           <div className="card-body">
             <h3 className="card-title">Blog Title: {blog[0].title}</h3>
-            <h4>Blog Author: {blog[0].authorid}</h4>
+            <h4>Blog Author: {blog[0].name}</h4>
             <h5>Tags: ?</h5>
             <p className="card-text">{blog[0].content}</p>
             <button className="btn btn-success">Edit Blog</button>

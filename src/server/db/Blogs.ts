@@ -11,7 +11,7 @@ const all = async () => {
 //Todo: make the rest safe from sql injections like this one:
 const individualBlogPost = async (id: number) => {
   return Query(
-    "select blogs.title, authors.name from blogs join authors on authors.id = blogs.authorid WHERE blogs.id=?;",
+    "select blogs.*, authors.name from blogs join authors on authors.id = blogs.authorid WHERE blogs.id=?;",
     [id]
   );
 };
