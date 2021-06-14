@@ -17,11 +17,11 @@ export interface ITag {
 }
 
 export interface IFullBlog {
-  id: number;
+  id?: number;
   title: string;
   content: string;
-  authorid: number;
-  name: string;
-  email: string;
-  tagname: string;
+  authorid?: number;
+  _created?: Date;
+  authorName: string;
+  authorEmail: string;
 }

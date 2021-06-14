@@ -27,7 +27,6 @@ router.post("/", async (req, res) => {
 
 router.put("/", async (req, res) => {
   try {
-    console.log("attempting");
     res.json(await db.Tags.updateTag(req.body));
   } catch (error) {
     console.log(error);
@@ -38,7 +37,6 @@ router.put("/", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   let id = Number(req.params.id);
-  console.log("hello");
   try {
     res.json(await db.Tags.deleteTag(id));
   } catch (error) {

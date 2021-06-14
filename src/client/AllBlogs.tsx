@@ -41,4 +41,3 @@ const AllBlogs = (props: any) => {
 };
 
 export default AllBlogs;
-//nice
